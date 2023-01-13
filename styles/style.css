@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    gap: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+a.btn,
+button {
+    text-decoration: none;
+    display: inline-block;
+    color: #f9fafb;
+    border: 2px solid #f9fafb;
+    transform: scale(1);
+}
+
+a.btn:hover {
+    background-color: rgba(211, 211, 211, 0.7);
+    border: none;
+    color: black;
+    font-weight: bolder;
+    transform: scale(1.3);
+}
+
+/*--------------------- header ---------------------*/
+.header {
+    display: block;
+    height: 100vh;
+    color: #f9fafb;
+}
+
+.video-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -99;
+}
+
+video {
+    filter: brightness(60%)
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(211, 211, 211, 0.5);
+    height: 12vh;
+    padding: 20px 8vw;
+
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    align-items: center;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+/*--------------------- about ---------------------*/
+#about {
+    height: calc(100% - 12vh);
+    padding: 20px 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+h1.bout:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+div.bout {
+    text-align: center;
+}
+
+a.btn {
+    padding: 70px 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px;
+}
+
+@media (min-width: 1024px) {
+    #about {
+        flex-direction: row;
+    }
+
+    div.bout {
+        text-align: left;
+        flex: 5;
+    }
+
+    div.explore {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1.bout {
+        font-size: 65px;
+    }
+
+    a.btn {
+        font-size: larger;
+        padding: 80px 60px;
+    }
+}
+
+/*--------------------- content ---------------------*/
+div.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > section {
+    padding: 20px 8vw;
+}
+
+/*--------------------- information ---------------------*/
+#information h1 {
+    text-align: center;
+}
+
+.container.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 52px;
+    text-align: center;
+}
+
+.item {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    transform: scale(1);
+    border: 3px solid #f9faf8;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.info p {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+@media (min-width: 1024px) {
+    #information {
+        height: 100vh;
+    }
+}
+
+/*--------------------- quote ---------------------*/
+#quote {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #E5E7EB;
+}
+
+figure {
+    padding: 150px 0;
+    color: #1f2937;
+}
+
+@media (min-width: 1024px) {
+    figure {
+        width: 50vw;
+    }
+}
+
+blockquote p {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+figcaption {
+    text-align: end;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*--------------------- Contact ---------------------*/
+#contact {
+    background: rgba(60, 66, 63, 0.8);
+    border-radius: 20px;
+    color: #f9fafb;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+button.signup {
+    padding: 20px;
+    border-radius: 20px;
+    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button.signup:hover {
+    background: #f9faf8;
+    color: rgba(60, 66, 63, 0.8);
+}
+
+@media (min-width: 1024px) {
+    #contact {
+        width: 80vw;
+    }
+}
+
+/*--------------------- footer ---------------------*/
+div.footer {
+    background: rgba(211, 211, 211, 0.5);
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    flex-direction: column;
+    gap: 5px;
+}
+
+div.modal {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.resources {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgba(60, 66, 63, 0.8);
+    padding: 1.5rem 2rem;
+    width: 25rem;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1em;
+    color: rgba(211, 211, 211, 0.6);
+}
+
+#close {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgba(211, 211, 211, 0.5);
+    margin-left: 10px;
+}
+
+#close:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.resources a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#openModal {
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: #f9faf8;
+    background: rgba(60, 66, 63, 0.8);
+    border: none;
+}
+
+#openModal:hover {
+    background: transparent;
+    border: 2px solid rgba(60, 66, 63, 0.8);
+    color:rgba(60, 66, 63, 0.8);
+    font-weight: bold;
+}
+
+.showModal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1.0) !important;
+    transition: visibility 0s linear 0s, opacity 0.25s, transform 0.25s;
+}
+
+@media (min-width: 1024px) {
+    div.resources {
+        width: 50rem;
+        font-size: 1.2em;
+    }
+}

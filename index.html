@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Cosmos</title>
+    <link rel="icon" href="./images/favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <video autoplay loop muted plays-inline class="video-container">
+            <source src="./images/background.mp4" type="video/mp4">
+        </video>
+    
+        <div class="navbar">
+            <div class="logo">Cosmos</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#information">Information</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <section id="about">
+            <div class="bout container">
+                <h1 class="bout">To Infinity and Beyond</h1>
+                <p>Over billion trillion stars in the universe, there are many planetary systems like ours in the universe, with planets orbiting a host star. Our planetary system is called “the solar system” because we use the word “solar” to describe things related to our star, after the Latin word for Sun, "solis." Explore the mystery of the space in this website.</p>
+            </div>
+            <div class="explore container">
+                <a href="#information" class="btn">EXPLORE</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="content">
+        <section id="information">
+            <h1>Information</h1>
+                <div class="container info">
+                    <div class="item">
+                        <img src="./images/galaxy.jpg" alt="Galaxy">
+                        <p>Galaxies are thought to begin as small clouds of stars and dust swirling through space. As other clouds get close, gravity sends these objects careening into one another and knits them into larger spinning packs.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/milky-way.jpg" alt="Milky Way">
+                        <p>Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way. Discover more about Milky Way.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/solar-system.jpg" alt="Solar System">
+                        <p>Our solar system consists of our star, the Sun, and everything bound to it by gravity – the planets, dozens of moons, and millions of asteroids, comets, and meteoroids.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/moon.jpg" alt="Moon">
+                        <p>Moons – also known as natural satellites – orbit planets and asteroids in our solar system. Earth has one moon, and there are more than 200 moons in our solar system.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="quote">
+            <figure>
+                <blockquote>
+                    <p>"Part of life's mystery depends on future possibilities, and mystery is an elusive quality which evaporates when sampled frequently, to be followed by boredom."</p>
+                </blockquote>
+                <figcaption>—Micheal Collins</figcaption>
+            </figure>
+        </section>
+        
+        <section id="contact">
+            <div class="container">
+                <p>Call to action! It's time!</p>
+                <p>Sign up for our product by clicking that button right over there!</p>
+            </div>
+            <button class="signup">Sign Up</button>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; Lee Min Yao</p>
+        <button class="trigger" id="openModal">Resources</button>
+        <div class="modal" id="resourcesModal">
+            <div class="resources">
+                <span id="close">&times;</span>
+                <p>Images by <a href="https://www.pexels.com/">Pexels</a> from <a href="https://pixabay.com/">Pixabay</a> and <a href="https://unsplash.com/">Unsplash</a></p>
+                <p>Live background from <a href="https://youtu.be/HYZsRWlMrf0">Youtube</a></p>
+                <p>Information from <a href="https://www.nasa.gov/">Nasa</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const btn = document.querySelector(".trigger");
+        const closebtn = document.querySelector("#close");
+
+        function toggleModal() {
+            modal.classList.toggle("showModal");
+        }
+
+        function windownOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        btn.addEventListener("click", toggleModal);
+        closebtn.addEventListener("click", toggleModal);
+        window.addEventListener("click", windownOnClick);
+    </script>
+</body>
+</html>
