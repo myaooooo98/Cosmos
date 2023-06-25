@@ -21,7 +21,15 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#information">Information</a></li>
+                    <li>
+                        <a href="#information">Information</a>
+                        <ul class="dropdown">
+                            <li><a href="">Galaxy</a></li>
+                            <li><a href="">Milky Way</a></li>
+                            <li><a href="">Solar System</a></li>
+                            <li><a href="">Moon</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -92,24 +100,6 @@
         </div>
     </div>
 
-    <script>
-        const modal = document.querySelector(".modal");
-        const btn = document.querySelector(".trigger");
-        const closebtn = document.querySelector("#close");
-
-        function toggleModal() {
-            modal.classList.toggle("showModal");
-        }
-
-        function windownOnClick(event) {
-            if (event.target === modal) {
-                toggleModal();
-            }
-        }
-
-        btn.addEventListener("click", toggleModal);
-        closebtn.addEventListener("click", toggleModal);
-        window.addEventListener("click", windownOnClick);
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
