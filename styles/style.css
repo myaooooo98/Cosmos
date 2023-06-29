@@ -95,6 +95,21 @@ video {
     font-weight: bolder;
 }
 
+nav {
+    position: relative;
+    perspective: 600px;
+}
+
+.drop > li > a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 5px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -103,10 +118,10 @@ nav ul {
     align-items: center;
 }
 
-nav li a {
-    text-decoration: none;
-    color: #E5E7EB;
-    font-size: 18px;
+.drop > li {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .dropdown {
@@ -155,6 +170,17 @@ nav li a {
     display: block;
     background: #fff;
     transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #727375;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dropdown a:hover {
+    color: rgb(202, 202, 134);
 }
 
 /*--------------------- about ---------------------*/
