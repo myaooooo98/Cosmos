@@ -183,6 +183,19 @@ nav ul {
     color: rgb(202, 202, 134);
 }
 
+.info {
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+}
+
+.info img {
+    float: left;
+    margin-right: 20px;
+}
+
 /*--------------------- about ---------------------*/
 #about {
     height: calc(100% - 12vh);
@@ -286,6 +299,7 @@ img:hover {
 .info p {
     margin-top: 20px;
     font-size: 1em;
+    color: black;
 }
 
 @media (min-width: 1024px) {

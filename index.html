@@ -25,16 +25,46 @@
 
                 <ul class="drop">
                     <li><a href="#about">About</a></li>
-                    <li>
-                        <a href="#information">Information</a>
+                    <li class="withInfo">
+                        <a href="">Galaxy</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/galaxy.jpg" alt="Galaxy">
+                                <p>Galaxies are thought to begin as small clouds of stars and dust swirling through space. As other clouds get close, gravity sends these objects careening into one another and knits them into larger spinning packs.</p>        
+                            </div>
+                        </div>
+                    </li>
+                    <li class="withInfo">
+                        <a href="">Milky Way</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/milky-way.jpg" alt="Milky Way">
+                                <p>Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way. Discover more about Milky Way.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="withInfo">
+                        <a href="">Solar System</a>
                         <ul class="dropdown">
-                            <li><a href="">Galaxy</a></li>
-                            <li><a href="">Milky Way</a></li>
-                            <li><a href="">Solar System</a></li>
-                            <li><a href="">Moon</a></li>
+                            <li><a href="">Mercury</a></li>
+                            <li><a href="">Venus</a></li>
+                            <li><a href="">Earth</a></li>
+                            <li><a href="">Mars</a></li>
+                            <li><a href="">Jupiter</a></li>
+                            <li><a href="">Saturn</a></li>
+                            <li><a href="">Uranus</a></li>
+                            <li><a href="">Neptune</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="withInfo">
+                        <a href="">Moon</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/moon.jpg" alt="Moon">
+                                <p>Moons – also known as natural satellites – orbit planets and asteroids in our solar system. Earth has one moon, and there are more than 200 moons in our solar system.</p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -124,7 +154,7 @@
         window.addEventListener("click", windownOnClick);
 
 
-        const triggers = document.querySelectorAll('.drop > li');
+        const triggers = document.querySelectorAll('.drop > li.withInfo');
         const background = document.querySelector('.dropdownBackground');
         const nav = document.querySelector('.top');
 
