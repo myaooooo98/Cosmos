@@ -85,7 +85,6 @@ video {
     justify-content: space-between;
     align-items: center;
     background: rgba(211, 211, 211, 0.5);
-    height: 12vh;
     padding: 20px 8vw;
 
 }
@@ -114,7 +113,6 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 5vw;
     align-items: center;
 }
 
@@ -133,7 +131,6 @@ nav ul {
     will-change: opacity;
     display: none;
     padding: 20px;
-    top: -20px;
     border-radius: 10px;
 }
 
