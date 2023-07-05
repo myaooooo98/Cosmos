@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Cosmos</title>
+    <link rel="icon" href="./images/favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <video autoplay loop muted plays-inline class="video-container">
+            <source src="./images/background.mp4" type="video/mp4">
+        </video>
+    
+        <div class="navbar">
+            <div class="logo">Cosmos</div>
+            <nav class="top">
+                <div class="dropdownBackground">
+                    <span class="arrow"></span>
+                </div>
+
+                <ul class="drop">
+                    <li><a href="#about">About</a></li>
+                    <li class="withInfo">
+                        <a href="">Universe</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/galaxy.jpg" alt="Galaxy">
+                                <p>Galaxies are thought to begin as small clouds of stars and dust swirling through space. As other clouds get close, gravity sends these objects careening into one another and knits them into larger spinning packs.</p>        
+                            </div>
+                        </div>
+                    </li>
+                    <li class="withInfo">
+                        <a href="">Milky Way</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/milky-way.jpg" alt="Milky Way">
+                                <p>Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way. Discover more about Milky Way.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="withInfo">
+                        <a href="">Solar System</a>
+                        <ul class="dropdown">
+                            <li><a href="">Mercury (God of commerce and skill)</a></li>
+                            <li><a href="">Venus (The Veiled Planet, Goddess of Beauty)</a></li>
+                            <li><a href="">The Earth</a></li>
+                            <li><a href="">Mars (Red Planet, God of war)</a></li>
+                            <li><a href="">Jupiter (Giant Planet, Ruler of Gods)</a></li>
+                            <li><a href="">Saturn (Ringed Planet, God of Agriculture)</a></li>
+                            <li><a href="">Uranus (The green Planet, God of Heavens)</a></li>
+                            <li><a href="">Neptune (A twin, God of the Sea)</a></li>
+                            <li><a href="">Drawf Planets</a></li>
+                        </ul>
+                    </li>
+                    <li class="withInfo">
+                        <a href="">Moon</a>
+                        <div class="dropdown">
+                            <div class="info">
+                                <img src="./images/moon.jpg" alt="Moon">
+                                <p>Moons – also known as natural satellites – orbit planets and asteroids in our solar system. Earth has one moon, and there are more than 200 moons in our solar system.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <section id="about">
+            <div class="bout container">
+                <h1 class="bout">To Infinity and Beyond</h1>
+                <p>Over billion trillion stars in the universe, there are many planetary systems like ours in the universe, with planets orbiting a host star. Our planetary system is called “the solar system” because we use the word “solar” to describe things related to our star, after the Latin word for Sun, "solis." Explore the mystery of the space in this website.</p>
+            </div>
+            <div class="explore container">
+                <a href="#information" class="btn">EXPLORE</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="content">
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; Lee Min Yao</p>
+        <button class="trigger" id="openModal">Resources</button>
+        <div class="modal" id="resourcesModal">
+            <div class="resources">
+                <span id="close">&times;</span>
+                <p>Images by <a href="https://www.pexels.com/">Pexels</a> from <a href="https://pixabay.com/">Pixabay</a> and <a href="https://unsplash.com/">Unsplash</a></p>
+                <p>Live background from <a href="https://youtu.be/HYZsRWlMrf0">Youtube</a></p>
+                <p>Information from <a href="https://www.nasa.gov/">Nasa</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const btn = document.querySelector(".trigger");
+        const closebtn = document.querySelector("#close");
+
+        function toggleModal() {
+            modal.classList.toggle("showModal");
+        }
+
+        function windownOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        btn.addEventListener("click", toggleModal);
+        closebtn.addEventListener("click", toggleModal);
+        window.addEventListener("click", windownOnClick);
+
+
+        const triggers = document.querySelectorAll('.drop > li.withInfo');
+        const background = document.querySelector('.dropdownBackground');
+        const nav = document.querySelector('.top');
+
+        function handleEnter() {
+            // change the display to block
+            this.classList.add('trigger-enter');
+            setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
+            background.classList.add('open');
+        
+            const dropdown = this.querySelector('.dropdown');
+            // get the position of the item on the page
+            const dropdownCoords = dropdown.getBoundingClientRect();
+            const navCoords = nav.getBoundingClientRect();
+
+            const coords = {
+              height: dropdownCoords.height,
+              width: dropdownCoords.width,
+              top: dropdownCoords.top - navCoords.top, 
+              left: dropdownCoords.left - navCoords.left,
+            };
+        
+            background.style.setProperty('width', `${coords.width}px`);
+            background.style.setProperty('height', `${coords.height}px`);
+            background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`);
+        }
+        
+        function handleLeave() {
+            this.classList.remove('trigger-enter', 'trigger-enter-active');
+            background.classList.remove('open');
+        }
+        
+        triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+        triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+    </script>
+</body>
+</html>
