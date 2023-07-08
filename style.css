@@ -116,6 +116,10 @@ nav ul {
     align-items: center;
 }
 
+ul.dropdown {
+    width: 400px;
+}
+
 .drop > li {
     position: relative;
     display: flex;
