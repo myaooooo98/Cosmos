@@ -123,3 +123,61 @@ body {
     border: 0.07em solid rgba(160, 147, 130, 0.5);
     box-sizing: border-box;
 }
+
+/* planet index */
+#mercury {
+    z-index: 10;
+}
+
+#venus {
+    z-index: 9;
+}
+
+#earth {
+    z-index: 8;
+}
+
+#moon {
+    z-index: 7;
+}
+
+#mars {
+    z-index: 6;
+}
+
+#jupiter {
+    z-index: 5;
+}
+
+#saturn {
+    z-index: 4;
+}
+
+#uranus {
+    z-index: 3;
+}
+
+#neptune {
+    z-index: 2;
+}
+
+#sun {
+    z-index: 1;
+}
+
+/* animation */
+@keyframes orbit {
+    0% {
+        transform: rotateZ('0deg');
+    }
+
+    100% {
+        transform: rotateZ('-360deg');
+    }
+}
+
+@keyframes suborbit {
+   0% {
+    transform: rotateX('90deg');
+   } 
+}
