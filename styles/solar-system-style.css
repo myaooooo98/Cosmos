@@ -229,3 +229,33 @@ body {
 .view-2D .moon {
     transform: rotateX(90deg); 
 }
+
+/* large zoom */
+.zoom-large #solar-system {
+    width: 100%;
+}
+
+.zoom-large.view-2D.scale-stretched#solar-system {
+    font-size: 26%;
+}
+
+.zoom-large.view-3D .scale-stretched #solar-system {
+    font-size: 62%; 
+}
+  
+.zoom-large.view-2D .scale-d #solar-system {
+    font-size: 22%; 
+}
+  
+.zoom-large.view-3D .scale-d #solar-system {
+    font-size: 48%; 
+}
+  
+.zoom-large.view-2D .scale-s #solar-system {
+    font-size: 7%; 
+}
+  
+.zoom-large.view-3D .scale-s #solar-system {
+    font-size: 14%; 
+}
+
