@@ -699,3 +699,85 @@ body {
   
 /* text info data */
 /* speed */
+.set-speed dl.info dd span:after {
+    content: 'Orbit Velocity'; 
+}
+  
+.set-speed #sun dl.info dd:after {
+    content: '0 km/h'; 
+}
+  
+.set-speed #mercury dl.info dd:after {
+    content: '170,503 km/h'; 
+}
+  
+.set-speed #venus dl.info dd:after {
+    content: '126,074 km/h';
+}
+  
+.set-speed #earth dl.info dd:after {
+    content: '107,218 km/h'; 
+}
+  
+.set-speed #mars dl.info dd:after {
+    content: '86,677 km/h'; 
+}
+  
+.set-speed #jupiter dl.info dd:after {
+    content: '47,002 km/h'; 
+}
+  
+.set-speed #saturn dl.info dd:after {
+    content: '34,701 km/h'; 
+}
+  
+.set-speed #uranus dl.info dd:after {
+    content: '24,477 km/h'; 
+}
+  
+.set-speed #neptune dl.info dd:after {
+    content: '19,566 km/h'; 
+}
+
+/* size */
+.set-size dl.infos dd span:after {
+    content: 'Equatorial Circumference'; 
+}
+  
+.set-size #sun dl.infos dd:after {
+    content: '4,370,005 km'; 
+}
+  
+.set-size #mercury dl.infos dd:after {
+    content: '15,329 km'; 
+}
+  
+.set-size #venus dl.infos dd:after {
+    content: '38,024 km'; 
+}
+  
+.set-size #earth dl.infos dd:after {
+    content: '40,030 km'; 
+}
+  
+.set-size #mars dl.infos dd:after {
+    content: '21,296 km'; 
+}
+  
+.set-size #jupiter dl.infos dd:after {
+    content: '439,263 km'; 
+}
+  
+.set-size #saturn dl.infos dd:after {
+    content: '365,882 km'; 
+}
+  
+.set-size #uranus dl.infos dd:after {
+    content: '159,354 km'; 
+}
+  
+.set-size #neptune dl.infos dd:after {
+    content: '154,704 km'; 
+}
+
+/* distance */
