@@ -1301,7 +1301,7 @@ dl.info dd:after {
   text-shadow: 1px 1px 2px black; 
 }
 
-dl.infos dd span:after {
+dl.info dd span:after {
   position: absolute;
   left: 50px;
   bottom: 14px;
@@ -1310,3 +1310,63 @@ dl.infos dd span:after {
   font-size: 11px;
   text-shadow: 1px 1px 2px black; 
 }
+
+.sun #sun .info,
+.mercury #mercury .info,
+.venus #venus .info,
+.earth #earth .info,
+.mars #mars .info,
+.jupiter #jupiter .info,
+.saturn #saturn .info,
+.uranus #uranus .info,
+.neptune #neptune .info {
+  display: block;
+  opacity: 1;
+  transform: rotateX(0deg); 
+}
+
+.mercury #mercury.orbit,
+.venus #venus.orbit,
+.earth #earth.orbit,
+.mars #mars.orbit,
+.jupiter #jupiter.orbit,
+.saturn #saturn.orbit,
+.uranus #uranus.orbit,
+.neptune #neptune.orbit {
+  border: 1px solid rgba(255, 255, 255, 0.8); 
+}
+
+.hide-UI h1,
+.hide-UI #data,
+.hide-UI dl.info,
+.hide-UI #controls {
+  opacity: 0!important;
+  margin-top: -30px; 
+}
+
+.hide-UI #data {
+  margin-bottom: -30px; 
+}
+
+.hide-UI .orbit {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; 
+}
+
+h1 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+h1 span, #navbar h1 a {
+  display: inline;
+  position: relative;
+  padding: 0;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5); 
+}
+
