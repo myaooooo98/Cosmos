@@ -1,3 +1,10 @@
-let body = document.querySelector('body')
-let universe = document.getElementbyId('universe')
-let solarsys = document.getElementbyId('solar-system')
+const body = document.body
+const universe = document.getElementbyId('universe')
+const solarsys = document.getElementbyId('solar-system')
+
+const init = function() {
+  body
+    .classList.remove('view-2D opening')
+    .classList.add('view-3D')
+    .delay(2000)
+}
